@@ -29,9 +29,14 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
 
-                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatStopsMovement))
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, whatStopsMovement))
                 {
                     movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                }
+                else
+                {
+                    Debug.Log("hit wall");
+                    movePoint.position += new Vector3(-Input.GetAxisRaw("Horizontal"), 0f, 0f);
                 }
 
             } else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
@@ -40,6 +45,10 @@ public class PlayerController : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatStopsMovement))
                 {
                     movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                } else 
+                {
+                    Debug.Log("hit wall");
+                    movePoint.position += new Vector3(0f, -Input.GetAxisRaw("Vertical"), 0f);
                 }
 
             }
