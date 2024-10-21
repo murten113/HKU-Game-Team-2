@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3534584756150238422}
   - component: {fileID: 9138982380682940197}
   - component: {fileID: 5949102951084625366}
+  - component: {fileID: 6155332474569915976}
   m_Layer: 6
   m_Name: Turn
   m_TagString: Untagged
@@ -143,8 +144,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b10d0913fd1b1469cb32c0ea9d97b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnClockwise: 0
+  turnClockwise: 1
   upDirection: 0
-  downDirection: 0
+  downDirection: 1
   leftDirection: 0
   rightDirection: 0
+--- !u!114 &6155332474569915976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298856169344983806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a281160a847474d8e4d13740477969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTransparency: 0.5
+  holdSizeMultiplier: 1.2
