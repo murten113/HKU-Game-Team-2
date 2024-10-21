@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ToggleCounter : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class ToggleCounter : MonoBehaviour
         }
 
         // Update the display text
+    }
+
+    public void OnButtonPress()
+    {
+        SceneManager.LoadScene(toggleCount);
     }
 
 
