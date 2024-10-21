@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevensPad.unity
     guid: 445b79d21ac5d0342a4e0b370a4b87d0
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 0b0794c08a26dac4cb8191224db205f8
+  - enabled: 1
     path: Assets/Scenes/firstTest.unity
     guid: ffd8573bb82732a45be84d0ba6cf3560
   - enabled: 1
