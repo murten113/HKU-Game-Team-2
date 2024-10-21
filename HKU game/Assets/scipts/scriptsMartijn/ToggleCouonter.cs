@@ -37,7 +37,7 @@ public class ToggleCounter : MonoBehaviour
 
     public void OnButtonPress()
     {
-        SceneManager.LoadScene(toggleCount);
+        SceneManager.LoadScene(toggleCount + 3);
     }
 
 
