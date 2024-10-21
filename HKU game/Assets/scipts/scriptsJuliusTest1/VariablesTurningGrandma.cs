@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class VariablesTurningGrandma : MonoBehaviour
 {
-    public bool turnClockwise = true;   // Determines if grandma turns clockwise
+    public bool turnClockwise = false;   // Determines if grandma turns clockwise
     public bool upDirection = false;     // Grandma facing up
-    public bool downDirection = true;    // Grandma facing down (default)
+    public bool downDirection = false;    // Grandma facing down (default)
     public bool leftDirection = false;   // Grandma facing left
     public bool rightDirection = false;  // Grandma facing right
 
