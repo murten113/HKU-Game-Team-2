@@ -26,6 +26,6 @@ public class collectibleCount : MonoBehaviour
 
     void UpdateCount()
     {
-        text.text = $"{count} / {collectible.total}";
+        text.text = $"Collected: {count}";
     }
 }
