@@ -1,19 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public GameObject gameObj;
+
+    public void Setup()
     {
-
-        if (collision.CompareTag("mainPlayer"))
-        {
-            SceneManager.LoadScene(1);
-        }
-
+        gameObj.SetActive(true);
     }
 
+
+    public void OnNextButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void OnRestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void OnMenuButton()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
