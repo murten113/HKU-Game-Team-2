@@ -15,10 +15,6 @@ public class SceneSwitcher : MonoBehaviour
     }
 
 
-    public void OnNextButton()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
 
     public void OnRestartButton()
     {
