@@ -73,15 +73,27 @@ public class ObjectSelector : MonoBehaviour
         {
             case 0: // Toggle Property A
                 selectedObject.upDirection = true;
+                selectedObject.downDirection = false;
+                selectedObject.leftDirection = false;
+                selectedObject.rightDirection = false;
                 break;
             case 1: // Toggle Property A
                 selectedObject.downDirection = true;
+                selectedObject.leftDirection = false;
+                selectedObject.rightDirection = false;
+                selectedObject.upDirection = false;
                 break;
             case 2: // Toggle Property A
                 selectedObject.leftDirection = true;
+                selectedObject.rightDirection = false;
+                selectedObject.upDirection = false;
+                selectedObject.downDirection = false;
                 break;
             case 3: // Toggle Property A
                 selectedObject.rightDirection = true;
+                selectedObject.upDirection = false;
+                selectedObject.downDirection = false;
+                selectedObject.leftDirection = false;
                 break;
         }
 
