@@ -6,17 +6,50 @@ public class VariablesTurningGrandma : MonoBehaviour
 {
     public bool turnClockwise = false;   // Determines if grandma turns clockwise
     public bool upDirection = false;     // Grandma facing up
-    public bool downDirection = false;    // Grandma facing down (default)
+    public bool downDirection = false;   // Grandma facing down (default)
     public bool leftDirection = false;   // Grandma facing left
     public bool rightDirection = false;  // Grandma facing right
 
     private Vector3 currentDirection;    // Current movement direction
+
+    // Track the last known state of direction booleans
+    private bool lastUpDirection;
+    private bool lastDownDirection;
+    private bool lastLeftDirection;
+    private bool lastRightDirection;
 
     // Start is called before the first frame update
     void Start()
     {
         // Set the initial direction based on which boolean is true
         SetInitialDirection();
+
+        // Initialize the last state variables
+        lastUpDirection = upDirection;
+        lastDownDirection = downDirection;
+        lastLeftDirection = leftDirection;
+        lastRightDirection = rightDirection;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Check if any of the direction booleans have changed
+        if (upDirection != lastUpDirection || downDirection != lastDownDirection ||
+            leftDirection != lastLeftDirection || rightDirection != lastRightDirection)
+        {
+            // Update the current direction based on active direction booleans
+            UpdateCurrentDirection();
+
+            // Rotate the grandma to match her new direction
+            RotateToCurrentDirection();
+
+            // Update last known state of the booleans
+            lastUpDirection = upDirection;
+            lastDownDirection = downDirection;
+            lastLeftDirection = leftDirection;
+            lastRightDirection = rightDirection;
+        }
     }
 
     // Turn the grandma 90 degrees based on the turnClockwise bool
@@ -43,6 +76,12 @@ public class VariablesTurningGrandma : MonoBehaviour
 
         // Rotate the grandma to match her new direction
         RotateToCurrentDirection();
+
+        // Update the last state booleans to reflect the new state after turning
+        lastUpDirection = upDirection;
+        lastDownDirection = downDirection;
+        lastLeftDirection = leftDirection;
+        lastRightDirection = rightDirection;
     }
 
     // Set initial direction from editor setup
@@ -93,6 +132,14 @@ public class VariablesTurningGrandma : MonoBehaviour
         leftDirection = left;
         rightDirection = right;
 
-        UpdateCurrentDirection(); // Ensure current direction is updated based on booleans
+        // Update current direction and rotation
+        UpdateCurrentDirection();
+        RotateToCurrentDirection();
+
+        // Update the last state booleans after setting the direction
+        lastUpDirection = up;
+        lastDownDirection = down;
+        lastLeftDirection = left;
+        lastRightDirection = right;
     }
 }
