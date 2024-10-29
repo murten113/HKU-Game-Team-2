@@ -819,6 +819,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -926,9 +934,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 193644007}
   sprites:
-  - {fileID: 21300000, guid: c31b522766691cd44b8f94516076ba7b, type: 3}
-  - {fileID: 21300000, guid: 7793781fab7fb30418f803bcc97c9d39, type: 3}
   - {fileID: 21300000, guid: 99bd237f451339a40aa494d47762efd7, type: 3}
+  - {fileID: 21300000, guid: 7793781fab7fb30418f803bcc97c9d39, type: 3}
+  - {fileID: 21300000, guid: c31b522766691cd44b8f94516076ba7b, type: 3}
   - {fileID: 21300000, guid: 06d7468eea798ef42b8a53e69cb25c79, type: 3}
 --- !u!1 &195622084
 GameObject:
