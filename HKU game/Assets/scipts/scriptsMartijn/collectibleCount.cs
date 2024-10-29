@@ -5,7 +5,7 @@ using UnityEngine;
 public class collectibleCount : MonoBehaviour
 {
     TMPro.TMP_Text text;
-    int count;
+    public int count;
 
 
     void Start() => UpdateCount();

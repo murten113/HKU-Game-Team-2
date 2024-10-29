@@ -8,9 +8,11 @@ public class SceneSwitcher : MonoBehaviour
 {
 
     public GameObject gameObj;
+    public EndCount EndCount;
 
     public void Setup()
     {
+        EndCount.WriteEnd();
         gameObj.SetActive(true);
     }
 
