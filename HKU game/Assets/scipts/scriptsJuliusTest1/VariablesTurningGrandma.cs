@@ -111,7 +111,7 @@ public class VariablesTurningGrandma : MonoBehaviour
         return currentDirection;
     }
 
-    // Rotate the grandma object and sprite based on the current direction
+    // Rotate the grandma object without affecting the sprite's rotation
     private void RotateToCurrentDirection()
     {
         if (currentDirection == Vector3.up)
@@ -122,6 +122,9 @@ public class VariablesTurningGrandma : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 90);        // Left
         else if (currentDirection == Vector3.right)
             transform.rotation = Quaternion.Euler(0, 0, -90);       // Right
+
+        // Keep the sprite's rotation unaffected
+        transform.GetChild(0).localRotation = Quaternion.identity; // Assuming the sprite is the first child
     }
 
     // Method to set the direction using booleans and update the currentDirection
@@ -143,3 +146,4 @@ public class VariablesTurningGrandma : MonoBehaviour
         lastRightDirection = right;
     }
 }
+
