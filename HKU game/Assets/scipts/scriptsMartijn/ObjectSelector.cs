@@ -7,16 +7,14 @@ public class ObjectSelector : MonoBehaviour
     private Camera mainCamera;
     private VariablesTurningGrandma selectedObject;
     public Dropdown propertyDropdown;
-    public Dropdown secondPropertyDropdown; // Second dropdown
-    public Button applyButton;
+    public Dropdown secondPropertyDropdown;
 
     void Start()
     {
         mainCamera = Camera.main;
-        propertyDropdown.onValueChanged.AddListener(OnDropdownChange);
+        propertyDropdown.onValueChanged.AddListener(OnPropertyDropdownChange);
         secondPropertyDropdown.onValueChanged.AddListener(OnSecondDropdownChange);
-        applyButton.onClick.AddListener(OnApplyButtonClick);
-        propertyDropdown.gameObject.SetActive(false); // Hide dropdowns initially
+        propertyDropdown.gameObject.SetActive(false);
         secondPropertyDropdown.gameObject.SetActive(false);
     }
 
@@ -54,42 +52,42 @@ public class ObjectSelector : MonoBehaviour
         secondPropertyDropdown.AddOptions(new List<string> { "Clockwise", "CounterClockwise" });
     }
 
-    void OnDropdownChange(int index)
+    void OnPropertyDropdownChange(int index)
     {
-        // Logic for the first dropdown (if needed)
+        ApplyChanges();
     }
 
     void OnSecondDropdownChange(int index)
     {
-        // Logic for the second dropdown (if needed)
+        ApplyChanges();
     }
 
-    void OnApplyButtonClick()
+    void ApplyChanges()
     {
         if (selectedObject == null) return;
 
         // Apply changes based on the first dropdown
         switch (propertyDropdown.value)
         {
-            case 0: // Toggle Property A
+            case 0: // Up
                 selectedObject.upDirection = true;
                 selectedObject.downDirection = false;
                 selectedObject.leftDirection = false;
                 selectedObject.rightDirection = false;
                 break;
-            case 1: // Toggle Property A
+            case 1: // Down
                 selectedObject.downDirection = true;
+                selectedObject.upDirection = false;
                 selectedObject.leftDirection = false;
                 selectedObject.rightDirection = false;
-                selectedObject.upDirection = false;
                 break;
-            case 2: // Toggle Property A
+            case 2: // Left
                 selectedObject.leftDirection = true;
                 selectedObject.rightDirection = false;
                 selectedObject.upDirection = false;
                 selectedObject.downDirection = false;
                 break;
-            case 3: // Toggle Property A
+            case 3: // Right
                 selectedObject.rightDirection = true;
                 selectedObject.upDirection = false;
                 selectedObject.downDirection = false;
@@ -100,13 +98,12 @@ public class ObjectSelector : MonoBehaviour
         // Apply changes based on the second dropdown
         switch (secondPropertyDropdown.value)
         {
-            case 0: // Toggle Property B
+            case 0: // Clockwise
                 selectedObject.turnClockwise = true;
                 break;
-            case 1: // Toggle Property B
+            case 1: // CounterClockwise
                 selectedObject.turnClockwise = false;
                 break;
         }
-
     }
 }

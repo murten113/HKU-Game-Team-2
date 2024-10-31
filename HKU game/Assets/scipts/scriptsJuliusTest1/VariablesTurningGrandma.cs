@@ -124,7 +124,7 @@ public class VariablesTurningGrandma : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, -90);       // Right
 
         // Keep the sprite's rotation unaffected
-        transform.GetChild(0).localRotation = Quaternion.identity; // Assuming the sprite is the first child
+        //transform.GetChild(0).localRotation = Quaternion.identity; // Assuming the sprite is the first child
     }
 
     // Method to set the direction using booleans and update the currentDirection
