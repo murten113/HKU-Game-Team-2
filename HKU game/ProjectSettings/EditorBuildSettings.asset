@@ -23,31 +23,31 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/levels/NoTogglesScene.unity
     guid: e17b4ecdba8ba954b83fae3764d50377
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level1.unity
     guid: e49e79a738391d84aaa1a652a99bad0e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level2.unity
     guid: 8c5c84596f145ee44995701da8a675c1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level3.unity
     guid: 6305ce60cccd64d4b9e06f0be0654b0a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level4.unity
     guid: 24ae0044222b8e449a08a73b2c031b22
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level5.unity
     guid: d03fee2eecbafcf4c94824ee2a583712
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level6.unity
     guid: f62d06d66363d734a914f24ddbef25cf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level7.unity
     guid: a7c7362ca75633b4c888fa0465a8c9b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level8.unity
     guid: 346e95aef8ec00244b7849e1102615ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/levels/Level9.unity
     guid: 519615138371f7347b9eb386ae6b8824
   - enabled: 1

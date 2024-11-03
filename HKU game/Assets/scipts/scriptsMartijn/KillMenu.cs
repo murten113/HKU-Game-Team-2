@@ -11,7 +11,7 @@ public class KillMenu : MonoBehaviour
     }
     public void OnRestartButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
 }
