@@ -34,32 +34,18 @@ public class DirectionalSpriteController : MonoBehaviour
         Vector2 currentPosition = transform.position;
         Vector2 movementDirection = currentPosition - lastPosition;
 
-        // Check if the object is moving in a specific direction
-        if (movementDirection.magnitude > 0.01f)  // Ensure some movement happened
+        // Determine which sprite to display based on movement direction
+        if (movementDirection.x != 0 || movementDirection.y != 0)  // Check if movement occurred
         {
             if (Mathf.Abs(movementDirection.x) > Mathf.Abs(movementDirection.y))
             {
-                // Moving left or right
-                if (movementDirection.x > 0)
-                {
-                    spriteRenderer.sprite = spriteRight;
-                }
-                else
-                {
-                    spriteRenderer.sprite = spriteLeft;
-                }
+                // Moving horizontally
+                spriteRenderer.sprite = movementDirection.x > 0 ? spriteRight : spriteLeft;
             }
             else
             {
-                // Moving up or down
-                if (movementDirection.y > 0)
-                {
-                    spriteRenderer.sprite = spriteUp;
-                }
-                else
-                {
-                    spriteRenderer.sprite = spriteDown;
-                }
+                // Moving vertically
+                spriteRenderer.sprite = movementDirection.y > 0 ? spriteUp : spriteDown;
             }
         }
 

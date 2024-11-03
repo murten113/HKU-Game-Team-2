@@ -1924,6 +1924,11 @@ RectTransform:
   m_AnchoredPosition: {x: -7.5, y: -0.5}
   m_SizeDelta: {x: -35, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &322913959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6410883271555007750, guid: c08ce6367749c9c4ea2c2b1e0242e76c, type: 3}
+  m_PrefabInstance: {fileID: 1890589704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &329580190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,7 +1986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 960119067}
   object2: {fileID: 1691322485}
-  object3: {fileID: 1812221972}
+  object3: {fileID: 322913959}
   opa1: {fileID: 963393802}
   opa2: {fileID: 235601505}
   opa3: {fileID: 1116455481}
@@ -9173,11 +9178,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801205275}
   m_CullTransparentMesh: 1
---- !u!1 &1812221972 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6410883271555007750, guid: c08ce6367749c9c4ea2c2b1e0242e76c, type: 3}
-  m_PrefabInstance: {fileID: 1880348711}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1824701583
 GameObject:
   m_ObjectHideFlags: 0
