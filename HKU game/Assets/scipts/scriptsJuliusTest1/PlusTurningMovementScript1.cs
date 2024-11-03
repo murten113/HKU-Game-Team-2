@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class PlayerController4 : MonoBehaviour
 {
-    public float moveSpeed = 5f;          // Speed of movement
-    public Transform movePoint;           // The point towards which the player moves
+    public float moveSpeed = 5f;                  // Speed of movement
+    public Transform movePoint;                   // The point towards which the player moves
 
-    public LayerMask whatStopsMovement;   // Layer mask to define what blocks movement
-    public LayerMask turnPlayerLayer;     // Layer mask for "TurnPlayer" objects like grandma
+    public LayerMask whatStopsMovement;           // Layer mask to define what blocks movement
+    public LayerMask turnPlayerLayer;             // Layer mask for "TurnPlayer" objects like grandma
 
-    private Vector3 moveDirection;        // Current movement direction
-    private bool isMoving;                // Tracks if the player is currently moving
+    public AudioClip stopMovementClip;            // Sound for hitting a stop movement point
+    public float stopMovementVolume = 1f;         // Volume for stop movement sound
+    public AudioClip turnPlayerClip;              // Sound for hitting a turn player point
+    public float turnPlayerVolume = 1f;           // Volume for turn player sound
+
+    private Vector3 moveDirection;                // Current movement direction
+    private bool isMoving;                        // Tracks if the player is currently moving
+    private AudioSource audioSource;              // AudioSource component to play sounds
 
     // Start is called before the first frame update
     void Start()
     {
-        movePoint.parent = null;          // Detach movePoint from the player
-        moveDirection = Vector3.up;       // Initial movement direction is upward
+        movePoint.parent = null;                  // Detach movePoint from the player
+        moveDirection = Vector3.up;               // Initial movement direction is upward
         isMoving = false;
+
+        // Initialize AudioSource component
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,6 +55,9 @@ public class PlayerController4 : MonoBehaviour
                 }
                 else
                 {
+                    // Play the stop movement sound when an obstacle is hit
+                    PlaySound(stopMovementClip, stopMovementVolume);
+
                     // Reverse the direction (180 degrees) if an obstacle is hit
                     TurnAround();
                 }
@@ -67,14 +79,11 @@ public class PlayerController4 : MonoBehaviour
             VariablesTurningGrandma grandma = hitCollider.GetComponent<VariablesTurningGrandma>();
             if (grandma != null)
             {
+                // Play the turn player sound when turning is triggered by grandma
+                PlaySound(turnPlayerClip, turnPlayerVolume);
+
                 // Turn the player in the grandma's direction
                 SetMoveDirection(grandma.GetCurrentDirection());
-
-                // Flip the player sprite to match the new direction
-                FlipSprite(moveDirection);
-
-                // No need to move the player immediately after turning
-                // Simply update the move direction and allow normal movement on the next update
 
                 // Make the grandma turn after turning the player
                 grandma.Turn();
@@ -90,9 +99,6 @@ public class PlayerController4 : MonoBehaviour
     {
         // Reverse the move direction by 180 degrees
         moveDirection *= -1;
-
-        // Optionally, flip the sprite to match the new direction
-        FlipSprite(moveDirection);
     }
 
     // Set the player's movement direction
@@ -101,22 +107,12 @@ public class PlayerController4 : MonoBehaviour
         moveDirection = newDirection;
     }
 
-    // Method to flip the sprite based on movement direction
-    void FlipSprite(Vector3 direction)
+    // Method to play a sound clip at a specified volume
+    private void PlaySound(AudioClip clip, float volume)
     {
-        if (direction == Vector3.right || direction == Vector3.left)
+        if (clip != null && audioSource != null)
         {
-            // Rotate the player horizontally (Y-axis)
-            Vector3 scale = transform.localScale;
-            scale.x = direction == Vector3.right ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
-            transform.localScale = scale;
-        }
-        else if (direction == Vector3.up || direction == Vector3.down)
-        {
-            // Rotate vertically (flipping for up and down movement, if needed)
-            Vector3 scale = transform.localScale;
-            scale.y = direction == Vector3.up ? Mathf.Abs(scale.y) : -Mathf.Abs(scale.y);
-            transform.localScale = scale;
+            audioSource.PlayOneShot(clip, volume);
         }
     }
 }
