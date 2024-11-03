@@ -6,6 +6,7 @@ TagManager:
   tags:
   - mainPlayer
   - WIN
+  - death
   layers:
   - Default
   - TransparentFX
