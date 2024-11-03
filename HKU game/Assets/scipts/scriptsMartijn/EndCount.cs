@@ -15,6 +15,6 @@ public class EndCount : MonoBehaviour
     public void WriteEnd()
     {
         text = GetComponent<TMPro.TMP_Text>();
-        text.text = $"You've collected: {counter.count} artifacts. Well done!";
+        text.text = $"You've achieved {counter.count} milestone('s) in your life";
     }
 }
