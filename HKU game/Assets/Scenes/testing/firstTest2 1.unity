@@ -2789,7 +2789,7 @@ GameObject:
   - component: {fileID: 545293380}
   - component: {fileID: 545293381}
   - component: {fileID: 545293382}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: levelEnd
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -3042,7 +3042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 625838016}
   - component: {fileID: 625838017}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Skelet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
