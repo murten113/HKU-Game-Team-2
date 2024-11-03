@@ -8,6 +8,9 @@ public class GrandmaDraggable : MonoBehaviour
     public float holdSizeMultiplier = 1.2f;    // Size multiplier when holding the grandma
     public LayerMask stopMovementLayer;        // LayerMask for tiles that block movement
 
+    public AudioClip placeSound;               // Sound clip to play when placing grandma
+    public float placeSoundVolume = 1f;        // Volume of the place sound
+
     private bool isHeld = false;               // Whether the grandma is being held
     private bool isLocked = false;             // Whether movement is locked after pressing spacebar
     private Vector3 originalSize;              // Original size of the grandma
@@ -15,6 +18,7 @@ public class GrandmaDraggable : MonoBehaviour
     private Vector3 originalPosition;          // Original position of the grandma
     private SpriteRenderer spriteRenderer;     // Sprite renderer component
     private Collider2D grandmaCollider;        // Collider for the grandma
+    private AudioSource audioSource;           // AudioSource to play sound effects
 
     void Start()
     {
@@ -24,7 +28,12 @@ public class GrandmaDraggable : MonoBehaviour
 
         originalSize = transform.localScale;
         originalTransparency = spriteRenderer.color.a;
-        originalPosition = transform.position; // Store original position
+        originalPosition = transform.position;
+
+        // Initialize AudioSource component for playing the place sound
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = placeSound;
+        audioSource.volume = placeSoundVolume;
     }
 
     void Update()
@@ -90,6 +99,9 @@ public class GrandmaDraggable : MonoBehaviour
         {
             // Place the grandma on the grid if no obstacle is present
             transform.position = gridPosition;
+
+            // Play the placement sound at the specified volume
+            PlayPlaceSound();
         }
 
         // Return the grandma to her original size and transparency
@@ -115,5 +127,14 @@ public class GrandmaDraggable : MonoBehaviour
     {
         Collider2D hitCollider = Physics2D.OverlapCircle(position, 0.1f, stopMovementLayer);
         return hitCollider == null;
+    }
+
+    // Play the placement sound
+    private void PlayPlaceSound()
+    {
+        if (audioSource != null && placeSound != null)
+        {
+            audioSource.PlayOneShot(placeSound, placeSoundVolume);
+        }
     }
 }

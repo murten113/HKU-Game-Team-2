@@ -847,6 +847,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -962,10 +970,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 193644007}
   sprites:
-  - {fileID: 21300000, guid: 99bd237f451339a40aa494d47762efd7, type: 3}
-  - {fileID: 21300000, guid: 7793781fab7fb30418f803bcc97c9d39, type: 3}
-  - {fileID: 21300000, guid: c31b522766691cd44b8f94516076ba7b, type: 3}
-  - {fileID: 21300000, guid: 06d7468eea798ef42b8a53e69cb25c79, type: 3}
+  - {fileID: 21300000, guid: 799f40f5b55dbdf42b2ed0f4ab2a990c, type: 3}
+  - {fileID: 21300000, guid: 3dc14c71d469238458c1c4e5d2e88428, type: 3}
+  - {fileID: 21300000, guid: a5168c6fee13cab498516153a5866157, type: 3}
+  - {fileID: 21300000, guid: 7e9ab797768a27a40931e79244c0cfec, type: 3}
 --- !u!4 &193644013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1357798956802568923, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
@@ -1129,6 +1137,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -1174,10 +1190,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 235601506}
   sprites:
-  - {fileID: 21300000, guid: 99bd237f451339a40aa494d47762efd7, type: 3}
-  - {fileID: 21300000, guid: 7793781fab7fb30418f803bcc97c9d39, type: 3}
-  - {fileID: 21300000, guid: c31b522766691cd44b8f94516076ba7b, type: 3}
-  - {fileID: 21300000, guid: 06d7468eea798ef42b8a53e69cb25c79, type: 3}
+  - {fileID: 21300000, guid: 799f40f5b55dbdf42b2ed0f4ab2a990c, type: 3}
+  - {fileID: 21300000, guid: 3dc14c71d469238458c1c4e5d2e88428, type: 3}
+  - {fileID: 21300000, guid: a5168c6fee13cab498516153a5866157, type: 3}
+  - {fileID: 21300000, guid: 7e9ab797768a27a40931e79244c0cfec, type: 3}
 --- !u!1 &244179730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1499,7 @@ MonoBehaviour:
   stopMovementClip: {fileID: 8300000, guid: fb3e337ffacdf4f46b162bcc31818a1d, type: 3}
   stopMovementVolume: 1
   turnPlayerClip: {fileID: 8300000, guid: 4a729681edeed7449a3458caaff05d9b, type: 3}
-  turnPlayerVolume: 1
+  turnPlayerVolume: 0.6
 --- !u!114 &256480097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2243,6 +2259,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -2288,10 +2312,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 365786816}
   sprites:
-  - {fileID: 21300000, guid: 99bd237f451339a40aa494d47762efd7, type: 3}
-  - {fileID: 21300000, guid: 7793781fab7fb30418f803bcc97c9d39, type: 3}
-  - {fileID: 21300000, guid: c31b522766691cd44b8f94516076ba7b, type: 3}
-  - {fileID: 21300000, guid: 06d7468eea798ef42b8a53e69cb25c79, type: 3}
+  - {fileID: 21300000, guid: 799f40f5b55dbdf42b2ed0f4ab2a990c, type: 3}
+  - {fileID: 21300000, guid: 3dc14c71d469238458c1c4e5d2e88428, type: 3}
+  - {fileID: 21300000, guid: a5168c6fee13cab498516153a5866157, type: 3}
+  - {fileID: 21300000, guid: 7e9ab797768a27a40931e79244c0cfec, type: 3}
 --- !u!1 &443064581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,6 +3837,14 @@ PrefabInstance:
     - target: {fileID: 5949102951084625366, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: turnClockwise
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -5763,6 +5795,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -6682,6 +6722,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -6798,6 +6846,14 @@ PrefabInstance:
     - target: {fileID: 5949102951084625366, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: turnClockwise
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -6916,6 +6972,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -6961,10 +7025,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1308733660}
   sprites:
-  - {fileID: 21300000, guid: 99bd237f451339a40aa494d47762efd7, type: 3}
-  - {fileID: 21300000, guid: 7793781fab7fb30418f803bcc97c9d39, type: 3}
-  - {fileID: 21300000, guid: c31b522766691cd44b8f94516076ba7b, type: 3}
-  - {fileID: 21300000, guid: 06d7468eea798ef42b8a53e69cb25c79, type: 3}
+  - {fileID: 21300000, guid: 799f40f5b55dbdf42b2ed0f4ab2a990c, type: 3}
+  - {fileID: 21300000, guid: 3dc14c71d469238458c1c4e5d2e88428, type: 3}
+  - {fileID: 21300000, guid: a5168c6fee13cab498516153a5866157, type: 3}
+  - {fileID: 21300000, guid: 7e9ab797768a27a40931e79244c0cfec, type: 3}
 --- !u!1 &1327319126
 GameObject:
   m_ObjectHideFlags: 0
@@ -7236,6 +7300,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -7281,10 +7353,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1357544236}
   sprites:
-  - {fileID: 21300000, guid: 99bd237f451339a40aa494d47762efd7, type: 3}
-  - {fileID: 21300000, guid: 7793781fab7fb30418f803bcc97c9d39, type: 3}
-  - {fileID: 21300000, guid: c31b522766691cd44b8f94516076ba7b, type: 3}
-  - {fileID: 21300000, guid: 06d7468eea798ef42b8a53e69cb25c79, type: 3}
+  - {fileID: 21300000, guid: 799f40f5b55dbdf42b2ed0f4ab2a990c, type: 3}
+  - {fileID: 21300000, guid: 3dc14c71d469238458c1c4e5d2e88428, type: 3}
+  - {fileID: 21300000, guid: a5168c6fee13cab498516153a5866157, type: 3}
+  - {fileID: 21300000, guid: 7e9ab797768a27a40931e79244c0cfec, type: 3}
 --- !u!1 &1399300595
 GameObject:
   m_ObjectHideFlags: 0
@@ -7594,7 +7666,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -4.52, y: 6.4, z: -2.3150444}
-  m_LocalScale: {x: 1, y: 30.41071, z: 1}
+  m_LocalScale: {x: 1, y: 22.047766, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 55584175}
@@ -8751,6 +8823,14 @@ PrefabInstance:
       propertyPath: turnClockwise
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d6af7bcd493b65446ae3f95d2651b661, type: 3}
+    - target: {fileID: 6155332474569915976, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
+      propertyPath: placeSoundVolume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9138982380682940197, guid: b1571afc358a0564d81a65ec67170fac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -9857,6 +9937,54 @@ RectTransform:
   m_AnchoredPosition: {x: -7.5, y: -0.5}
   m_SizeDelta: {x: -35, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2088378948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088378950}
+  - component: {fileID: 2088378949}
+  m_Layer: 0
+  m_Name: sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2088378949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088378948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb57ab0749268504fa7f3abc8188dd06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetUIElements:
+  - {fileID: 1756357374}
+  soundClip: {fileID: 8300000, guid: 3fc7c0ac5ffcc554db7a52e83fd18e87, type: 3}
+  soundVolume: 0.27
+--- !u!4 &2088378950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088378948}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 695.55273, y: 355.32077, z: -3.7541273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091190091
 GameObject:
   m_ObjectHideFlags: 0
@@ -11103,3 +11231,4 @@ SceneRoots:
   - {fileID: 1126021783}
   - {fileID: 55584175}
   - {fileID: 1347026032}
+  - {fileID: 2088378950}
