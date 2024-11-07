@@ -7,6 +7,7 @@ public class GrandmaDraggable : MonoBehaviour
     public float holdTransparency = 0.5f;      // Transparency when holding the grandma
     public float holdSizeMultiplier = 1.2f;    // Size multiplier when holding the grandma
     public LayerMask stopMovementLayer;        // LayerMask for tiles that block movement
+    public LayerMask noPlaceLayer;             // LayerMask for tiles that block placement
 
     public AudioClip placeSound;               // Sound clip to play when placing grandma
     public float placeSoundVolume = 1f;        // Volume of the place sound
@@ -89,7 +90,7 @@ public class GrandmaDraggable : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 gridPosition = SnapToGrid(mousePosition);
 
-        // Check if the new position has a blocking tile on the "StopMovement" layer
+        // Check if the new position is blocked by either the stopMovementLayer or noPlaceLayer
         if (!CanPlaceOnTile(gridPosition))
         {
             // If there's an obstacle, return the grandma to the original position
@@ -125,7 +126,8 @@ public class GrandmaDraggable : MonoBehaviour
     // Check if the grandma can be placed on the given position (check for obstacles)
     private bool CanPlaceOnTile(Vector3 position)
     {
-        Collider2D hitCollider = Physics2D.OverlapCircle(position, 0.1f, stopMovementLayer);
+        // Check if there's a collider in the stopMovementLayer or noPlaceLayer
+        Collider2D hitCollider = Physics2D.OverlapCircle(position, 0.1f, stopMovementLayer | noPlaceLayer);
         return hitCollider == null;
     }
 
